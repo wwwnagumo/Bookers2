@@ -1,2 +1,10 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<div class="container">
+  <div class="row">
+  	<%= render 'books/list', user: current_user, book: @book %>
+  	<div class="col-lg-9">
+  	  <h2>Book detail</h2>
+  	  <table>
+  	  </table>
+  	</div>
+  </div>
+</div>
