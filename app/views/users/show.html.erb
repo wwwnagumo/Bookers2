@@ -1,4 +1,9 @@
 <div class="container">
+  <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+  <% end %>
   <div class="row">
   	<%= render 'books/list', user: current_user, book: @book %>
   	<div class="col-lg-9">
