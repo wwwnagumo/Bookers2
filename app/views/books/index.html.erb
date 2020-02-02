@@ -3,18 +3,23 @@
   	<%= render 'books/list', user: current_user, book: @book %>
   	<div class="col-lg-9">
   	  <h2>Books</h2>
-  	  <table class="table table-hover">
-  	  	<tr>
-  	  	<th colspan="1"></th>
-  	  	<th>Title</th>
-  	  	<th>Opinion</th>
-  	  	</tr>
+  	  <table class="table table-hover table-inverse">
+  	  	<thead>
+          <tr>
+  	  	    <th colspan="1"></th>
+  	  	    <th>Title</th>
+  	  	    <th>Opinion</th>
+  	  	  </tr>
+        </thead>
+        <tbody>
   	  	<% @books.each do |book| %>
-        <th><%= attachment_image_tag @user, :profile_image_id, format:'jpeg', fallback: "no_image.jpg", size:'35x35' %></th>
-        <th><%= link_to book.title, book_path(book) %></th>
-        <th><%= book.body %></th>
-        </tr>
+          <tr>
+            <td><%= attachment_image_tag @user, :profile_image_id, format:'jpeg', fallback: "no_image.jpg", size:'35x35' %></td>
+            <td><%= link_to book.title, book_path(book) %></td>
+            <td><%= book.body %></td>
+          </tr>
         <% end %>
+        </tbody>
   	  </table>
   	</div>
   </div>

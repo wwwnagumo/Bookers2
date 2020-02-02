@@ -24,6 +24,7 @@
 a {
   text-decoration: none;
 }
+
 .navbar {
   border-radius: 0px;
 }
@@ -43,7 +44,41 @@ span {
 .book-icon2 {
   color: black;
 }
+p {
+  font-family: verdana, arial, helvetica, sans-serif;
+  line-height: 18px;
+  font-size: 13px;
+}
+.btn-info, .btn-success, .btn-danger {
+  color: #696969;
+}
+.actions {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 
 span.glyphicon-wrench {
   color: black;
 }
+
+/* テーブルのサイズ指定 */
+
+table th:nth-child(1) {
+  width: 20%;
+}
+table th:nth-child(2) {
+  width: 20%;
+}
+table th:nth-child(3) {
+  width: 20%;
+}
+table th:nth-child(4) {
+  width: 10%;
+}
+table th:nth-child(5) {
+  width: 10%;
+}
+
+
+
+
