@@ -20,17 +20,17 @@
             <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
               <li class="icon">
-                <%= link_to "/" do %>
+                <%= link_to user_path(current_user) do %>
                 <span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home
                 <% end %>
               </li>
               <li class="icon">
-                <%= link_to "/users" do %>
+                <%= link_to users_path do %>
                 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>Users
                 <% end %>
               </li>
               <li class="icon">
-                <%= link_to "/books" do %>
+                <%= link_to books_path do %>
                 <span class="glyphicon glyphicon-book" aria-hidden="true"></span>Books
                 <% end %>
               </li>
@@ -41,22 +41,22 @@
               </li>
             <% else %>
               <li class="icon">
-                <%= link_to "/" do %>
+                <%= link_to root_path do %>
                 <span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home
                 <% end %>
               </li>
               <li class="icon">
-                <%= link_to "/home/about" do %>
+                <%= link_to home_about_path do %>
                 <span class="glyphicon glyphicon-link" aria-hidden="true"></span>About
                 <% end %>
               </li>
               <li class="icon">
-                <%= link_to "/users/sign_up" do %>
-                <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>sign up
+                <%= link_to new_user_registration_path do %>
+                <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>Sign up
                 <% end %>
               </li>
               <li class="icon">
-                <%= link_to "/users/sign_in" do %>
+                <%= link_to user_session_path do %>
                 <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>login
                 <% end %>
               </li>
