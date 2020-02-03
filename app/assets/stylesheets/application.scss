@@ -79,6 +79,14 @@ table th:nth-child(5) {
   width: 10%;
 }
 
+/* バリデーション */
+.error_explanation {
+  color: red;
+}
 
+/* サクセスメッセージ */
+.flash {
+  color: limegreen;
+}
 
 
